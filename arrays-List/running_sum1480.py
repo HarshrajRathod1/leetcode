@@ -5,7 +5,7 @@
 #nums=[1,2,3,4]
 #output: [1,3,6,10]
 
-#approach one time compecity is O(n) and also space complxcity is O(n) this is not optimize solution
+#approach one time complexity is O(n) and also space complexity is O(n) this is not optimise solution
 def running_sum1(nums):
     res=list()
     res.append(nums[0])
@@ -13,6 +13,7 @@ def running_sum1(nums):
         res.append(nums[i]+res[i-1])
     return res
 
+#this approach is optimise because time complexity is O(n) ans space complexity is O(1)
 def running_sum2(nums):
     for i in range(1,len(nums)):
         nums[i]+=nums[i-1]
