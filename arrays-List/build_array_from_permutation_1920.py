@@ -29,3 +29,21 @@ def bulid_array2(nums):
 
 nums2=[5,0,1,2,3,4]
 print(bulid_array2(nums2))
+
+
+print("new")
+def buildArray(nums):
+        n = len(nums)
+        
+        # Step 1: Encode old and new value in the same element
+        for i in range(n):
+            nums[i] += (nums[nums[i]] % n) * n
+        # Step 2: Decode to get the required answer
+        print("step=2")
+        for i in range(n):
+            nums[i] //= n
+            print(nums[i])
+        return nums
+        
+nums=[5,0,1,2,3,4]
+print(buildArray(nums))
